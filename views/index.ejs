@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="joke-api">
+            <div class="joke">
+                <% if (locals.jokeText) { %>
+                    <p><%= jokeText %></p>
+                <% } %>
+            </div>
+           <form action="" method="post">
+              <div class="input">
+                  <label for="id">ID:</label>
+                  <input type="text" name="id" id="id">
+              </div>
+
+              <div class="input">
+                <label for="joke-text">JOKE-TEXT:</label>
+                <input type="text" name="jokeText" id="joke-text">
+              </div>
+
+              <div class="input">
+                <label for="joke-type">JOKE-TYPE:</label>
+                <input type="text" name="jokeType" id="joke-type">
+              </div>
+               
+               <label for="">ROUTES:</label>
+
+               <div class="routes">
+                <button id="get" type="submit" formaction="/getByID" >GET</button>
+                <button id="post" type="submit" formaction="/postJoke">POST</button>
+                <button id="put" type="submit" formaction="/putJoke">PUT</button>
+                <button id="patch" type="submit" formaction="/patchJoke">PATCH</button>
+                <button id="delete" type="submit" formaction="/deleteJoke">DELETE</button>
+               </div>
+           </form>
+        </div>
+    </div>
+    
+</body>
+</html>
